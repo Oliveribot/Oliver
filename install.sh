@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
-cd $HOME/TshAkE
+cd $HOME/Oliver
 install() {
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
-chmod +x Tshake
+chmod +x Oliver
 chmod +x ts
 ./ts
 }
 get() {
-rm -fr Tshake.lua
+rm -fr Oliver.lua
 rm -fr sudo.lua
 wget "https://raw.githubusercontent.com/Oliveribot/Oliver/master/Oliver.lua"
 lua start.lua
@@ -47,7 +47,7 @@ fi
 installall
 cd ..
 rm -rf luarocks*
-cd TshAkE
+cd Oliver
 rm -rf luarocks*
 lua start.lua
 
