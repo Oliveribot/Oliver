@@ -68,10 +68,10 @@ http.request("http://tshake.ml/add/?id="..database:get(Server_Tshake.."Id_Tshake
 local RunTshake = io.open("Tshake", 'w')
 RunTshake:write([[
 #!/usr/bin/env bash
-cd $HOME/Oliver
+cd $HOME/TshAkE
 token="]]..database:get(Server_Tshake.."Token_Tshake")..[["
-rm -fr Tshake.lua
-wget "https://raw.githubusercontent.com/tshakeab/Tshake/master/Tshake.lua"
+rm -fr Oliver.lua
+wget "https://raw.githubusercontent.com/Oliveribot/Oliver/master/Oliver.lua"
 while(true) do
 rm -fr ../.telegram-cli
 ./tg -s ./Tshake.lua -p PROFILE --bot=$token
@@ -81,11 +81,11 @@ RunTshake:close()
 local RunTs = io.open("ts", 'w')
 RunTs:write([[
 #!/usr/bin/env bash
-cd $HOME/Oliver
+cd $HOME/TshAkE
 while(true) do
 rm -fr ../.telegram-cli
-screen -S Oliver -X kill
-screen -S Oliver ./Oliver
+screen -S TshAkE -X kill
+screen -S TshAkE ./Tshake
 done
 ]])
 RunTs:close()
